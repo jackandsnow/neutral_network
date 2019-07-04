@@ -1,3 +1,7 @@
+"""
+python实现自定义神经网络
+Copyright by Jack
+"""
 import numpy as np
 import scipy.special as ss
 
@@ -63,7 +67,7 @@ if __name__ == '__main__':
 
     network = NeutralNetwork(input_nodes, hidden_nodes, output_nodes, learning_rate)
     # load mnist data, and train nn
-    train_data_file = open('../data/mnist_train.csv', 'r')
+    train_data_file = open('data/mnist_train.csv', 'r')
     train_data_list = train_data_file.readlines()
     train_data_file.close()
     print('train data length is ', len(train_data_list))
@@ -78,7 +82,7 @@ if __name__ == '__main__':
             network.train(inputs, targets)
 
     # test nn
-    test_data_file = open('../data/mnist_test.csv', 'r')
+    test_data_file = open('data/mnist_test.csv', 'r')
     test_data_list = test_data_file.readlines()
     test_data_file.close()
     scores = []
